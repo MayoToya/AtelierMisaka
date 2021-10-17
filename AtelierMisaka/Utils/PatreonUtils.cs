@@ -51,8 +51,10 @@ namespace AtelierMisaka
                     }
                     return ResultHelper.NoError(false);
                 }
+
                 CefHelper.Initialize();
-                _cwb = new ChromiumWebBrowser("about:blank");
+                _cwb = new ChromiumWebBrowser("about:blank") ;
+                this._cwb.JavascriptObjectRepository.Settings.LegacyBindingEnabled = true;
                 GlobalData.VM_MA.PatreonCefBrowser = _cwb;
                 while (!_cwb.IsBrowserInitialized)
                 {

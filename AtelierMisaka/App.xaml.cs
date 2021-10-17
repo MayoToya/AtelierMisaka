@@ -13,7 +13,7 @@ namespace AtelierMisaka
     {
         static App()
         {
-            AppDomain.CurrentDomain.AssemblyResolve += CefHelper.ResolveCefSharpAssembly;
+            //AppDomain.CurrentDomain.AssemblyResolve += CefHelper.ResolveCefSharpAssembly;
         }
 
         protected override void OnStartup(StartupEventArgs e)
